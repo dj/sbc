@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{! Page Meta }}
-    <title>{{meta_title}}</title>
+
+    <title>{{ meta_title }}</title>
+
     <meta name="description" content="{{meta_description}}" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -27,13 +29,31 @@
 
     <div class="site-wrapper">
 
-        {{! Everything else gets inserted here }}
+        {{! Main }}
         {{{body}}}
 
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+		{{! Footer }}
+		<footer class="footer">
+			<ul class="footer__nav">
+				<li>
+					<a href="/">
+						<img class="logo-mark" src="{{asset "img/favicon-96x96.png"}}" alt="Safe Bathrooms Club">
+					</a>
+				</li>
+				<li>
+					<a href="/about/">About</a>
+				</li>
+				<li>
+					<a href="http://goo.gl/forms/tbFz3MJhwX">Submit a bathroom</a>
+				</li>
+				<li>
+					<!--<img class="icon" src="img/social-instagram-outline.svg">-->
+					<a href="http://instagram.com/safebathroomsclub">@safebathroomsclub</a>
+				</li>
+				<li>© 2016</li>
+			</ul>
+		</footer>
+
 
     </div>
 

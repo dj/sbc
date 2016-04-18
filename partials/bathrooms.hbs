@@ -1,0 +1,23 @@
+{{! This is the bathroom loop - each post will be output using this markup }}
+{{#each cities}}
+<section class="site-width">
+  <h2 id="#{{city}}" class="city-name">{{city}}</h2>
+  <ul class="br-list">
+    {{#each bathrooms}}
+      <li class="br">
+        <p class="br-category">{{category}}</p>
+        <h4 class="br-name">{{name}}</h4>
+        <a href="https://www.google.com/maps/search/@{{c1}},{{c0}},12z?q={{name}}"><address class="address">
+          {{address}} {{zip}}
+        </address></a>
+        <ul class="br-links">
+          {{#if link}}
+            <li><a href="{{link}}"><img class="icon" src="img/{{icon}}"></a></li>
+          {{/if}}
+        </ul>
+      </li>
+    {{/each}}
+  </ul>
+</section>
+<hr class="hr">
+{{/each}}
