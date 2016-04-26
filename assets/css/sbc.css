@@ -16,6 +16,10 @@ body {
     margin: 0 auto;
 }
 
+.content {
+    padding-bottom: 250px;
+}
+
 /* Site Layout */
 .site-wrapper {
     min-height: 100vh;
