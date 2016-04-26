@@ -45,6 +45,7 @@ body {
     position: relative;
     margin: 0 auto;
     padding: 15px 0 15px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -56,6 +57,7 @@ body {
 .header__nav {
     list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
 .header__nav > li {
@@ -74,10 +76,6 @@ body {
 
 @media (min-width: 450px) {
     .header {
-        height: 90px;
-    }
-    .header__nav > li {
-        display: inline;
     }
 
     .header__nav > li:not(:last-child) {
@@ -86,6 +84,16 @@ body {
 
     .site-header {
         font-size: 2em;
+    }
+}
+
+@media (min-width: 690px) {
+    .header__nav {
+        width: auto;
+    }
+
+    .header__nav > li {
+        display: inline;
     }
 }
 
@@ -120,7 +128,6 @@ section {
   }
   .site-width {
     width: 90%;
-    padding: 0;
   }
   .hr {
     width: 90%;
@@ -133,7 +140,6 @@ section {
   }
   .site-width {
     width: 85%;
-    padding: 0;
   }
   .hr {
     width: 85%;
@@ -145,7 +151,6 @@ section {
   }
   .site-width {
     width: 85%;
-    padding: 0;
   }
 }
 
