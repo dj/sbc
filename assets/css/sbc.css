@@ -311,10 +311,10 @@ p img, img {
   .hero-h1, h1 {
     font-size: 1.5em;
   }
-  .about p {
+  .post-content p {
     width: 100%;
   }
-  .about .figure img {
+  .post-content .figure img {
     max-width: 100%;
     width: 100%;
   }
@@ -324,10 +324,10 @@ p img, img {
   .hero-h1, h1 {
     font-size: 1.75em;
   }
-  .about p {
+  .post-content p {
     width: 100%;
   }
-  .about .figure img {
+  .post-content .figure img {
     max-width: 100%;
     width: 100%;
   }
@@ -337,12 +337,11 @@ p img, img {
   .hero-h1, h1 {
     font-size: 3.2em;
   }
-  .about p {
+  .post-content p {
     width: 65%;
   }
-  .about .figure img {
-    max-width: 60%;
-    width: 60%;
+  .post-content img {
+    width: 55%;
   }
 
 }
@@ -351,12 +350,13 @@ p img, img {
   .hero-h1, h1 {
     font-size: 3.6em;
   }
-  .about p {
+  .post-content p {
     width: 65%;
   }
-  .about .figure img {
-    max-width: 60%;
-    width: 60%;
+  .post-content img {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
   }
 }
 
