@@ -1,0 +1,36 @@
+{{#each states}}
+  <section class="site-width">
+    <h1 id="#{{id}}">{{name}}</h1>
+    {{#each cities}}
+      <h2 id="#{{id}}" class="city-name">{{city}}</h2>
+      <ul class="br-list">
+        {{#each bathrooms}}
+          <li class="br">
+            <p class="br-category">{{category}}</p>
+            <h4 class="br-name">{{name}}</h4>
+            <a href="https://www.google.com/maps/search/@{{c1}},{{c0}},12z?q={{name}}"><address class="address">
+                {{address}} {{zip}}
+            </address></a>
+            <ul class="br-links">
+              {{#if instagram}}
+                <li><a href="{{link}}"><img class="icon" src="/assets/img/social-instagram-outline.svg"></a></li>
+              {{/if}}
+              {{#if facebook}}
+                <li><a href="{{link}}"><img class="icon" src="/assets/img/social-facebook.svg"></a></li>
+              {{/if}}
+              {{#if twitter}}
+                <li><a href="{{link}}"><img class="icon" src="/assets/img/social-twitter.svg"></a></li>
+              {{/if}}
+              {{#if www}}
+                <li><a href="{{link}}"><img class="icon" src="/assets/img/favicon-96x96.png"></a></li>
+              {{/if}}
+
+            </ul>
+          </li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </section>
+  <hr class="hr">
+{{/each}}
+

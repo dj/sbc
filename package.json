@@ -1,4 +1,12 @@
 {
-  "name": "Safe Bathrooms Club",
-  "version": "0.0.1"
+  "name": "sbc-theme",
+  "version": "0.0.1",
+  "scripts": {
+    "update": "node ./scripts/update.js"
+  },
+  "dependencies": {
+    "csv-parse": "^1.1.0",
+    "handlebars": "^4.0.5",
+    "lodash": "^4.12.0"
+  }
 }
