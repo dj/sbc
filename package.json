@@ -2,7 +2,8 @@
   "name": "sbc-theme",
   "version": "0.0.1",
   "scripts": {
-    "update": "node ./scripts/update.js"
+    "updateBathrooms": "npm run getCSV && node scripts/update.js > partials/bathrooms-list.hbs",
+    "getCSV": "curl https://docs.google.com/spreadsheets/d/1_jeXZCBTZRzcxy01JN3VBETAeo3_lN6U0SbKKxgrazE/pub?output=csv > ./assets/csv/bathrooms.csv"
   },
   "dependencies": {
     "csv-parse": "^1.1.0",

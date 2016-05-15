@@ -1,28 +1,17 @@
 "use strict";
 const fs = require('fs')
-const _ = require('lodash')
 const path = require('path')
 const hb = require('handlebars')
-const bathroomsCsv = 'https://docs.google.com/spreadsheets/d/1_jeXZCBTZRzcxy01JN3VBETAeo3_lN6U0SbKKxgrazE/pub?output=csv'
-const https = require('https')
 const parse = require('csv-parse/lib/sync')
 const states = require('../assets/js/states')
 const template = hb.compile(fs.readFileSync('./partials/bathrooms-list-template.hbs').toString())
+const _ = require('lodash')
 
 // Get the bathrooms file
-https.get(bathroomsCsv, function (res) {
-    // write the response to file
-    const bathroomsList = path.resolve('./assets/csv/bathrooms-list.csv');
-    res.pipe(fs.createWriteStream(bathroomsList))
+const bathroomsList = path.resolve('./assets/csv/bathrooms-list.csv');
 
-    res.on('end', function() {
-      let templateData = parseCsv()
-      console.log(template(templateData))
-    })
-})
-.on('error', function (err) {
-    console.log(err)
-})
+let templateData = parseCsv()
+console.log(template(templateData))
 
 function parseCsv () {
   const csv = fs.readFileSync('./assets/csv/bathrooms-list.csv')
